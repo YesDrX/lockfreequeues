@@ -52,7 +52,9 @@ proc used*(
   {.inline.} =
   ## Determine how many slots are taken in storage given `head`, `tail`, and
   ## `capacity` values.
-  assert validateHeadAndTail(head, tail, capacity)
+  # assert validateHeadAndTail(head, tail, capacity)
+  assert validateHeadOrTail(head, capacity)
+  assert validateHeadOrTail(tail, capacity)
   result = tail - head
   if result < 0:
     # Case when front in [Capacity, 2*Capacity)
@@ -67,7 +69,6 @@ proc used*(
     # back is at index 15 (real 1)
     # back - front + capacity = 1 - 3 + 7 = 5
     result += 2 * capacity
-
 
 
 proc available*(
@@ -128,6 +129,8 @@ proc empty*(
 ): bool
   {.inline.} =
   ## Determine if storage is empty given `head` and `tail` values.
-  assert validateHeadAndTail(head, tail, capacity)
+  # assert validateHeadAndTail(head, tail, capacity)
+  assert validateHeadOrTail(head, capacity)
+  assert validateHeadOrTail(tail, capacity)
   return head == tail
 

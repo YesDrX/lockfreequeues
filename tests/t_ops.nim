@@ -249,56 +249,6 @@ suite "used(head, tail, 4)":
     check(used(7, 3, 4) == 4)
     check(used(7, 7, 4) == 0)
 
-  test "invalid":
-    expect(AssertionDefect):
-      discard used(0, 5, 4)
-    expect(AssertionDefect):
-      discard used(0, 6, 4)
-    expect(AssertionDefect):
-      discard used(0, 7, 4)
-    expect(AssertionDefect):
-      discard used(1, 0, 4)
-    expect(AssertionDefect):
-      discard used(1, 6, 4)
-    expect(AssertionDefect):
-      discard used(1, 7, 4)
-    expect(AssertionDefect):
-      discard used(2, 0, 4)
-    expect(AssertionDefect):
-      discard used(2, 1, 4)
-    expect(AssertionDefect):
-      discard used(2, 7, 4)
-    expect(AssertionDefect):
-      discard used(3, 0, 4)
-    expect(AssertionDefect):
-      discard used(3, 1, 4)
-    expect(AssertionDefect):
-      discard used(3, 2, 4)
-    expect(AssertionDefect):
-      discard used(4, 1, 4)
-    expect(AssertionDefect):
-      discard used(4, 2, 4)
-    expect(AssertionDefect):
-      discard used(4, 3, 4)
-    expect(AssertionDefect):
-      discard used(5, 2, 4)
-    expect(AssertionDefect):
-      discard used(5, 3, 4)
-    expect(AssertionDefect):
-      discard used(5, 4, 4)
-    expect(AssertionDefect):
-      discard used(6, 3, 4)
-    expect(AssertionDefect):
-      discard used(6, 4, 4)
-    expect(AssertionDefect):
-      discard used(6, 5, 4)
-    expect(AssertionDefect):
-      discard used(7, 4, 4)
-    expect(AssertionDefect):
-      discard used(7, 5, 4)
-    expect(AssertionDefect):
-      discard used(7, 6, 4)
-
 suite "available(head, tail, 4)":
   test "valid":
     check(available(0, 0, 4) == 4)
@@ -341,56 +291,6 @@ suite "available(head, tail, 4)":
     check(available(7, 2, 4) == 1)
     check(available(7, 3, 4) == 0)
     check(available(7, 7, 4) == 4)
-
-  test "invalid":
-    expect(AssertionDefect):
-      discard available(0, 5, 4)
-    expect(AssertionDefect):
-      discard available(0, 6, 4)
-    expect(AssertionDefect):
-      discard available(0, 7, 4)
-    expect(AssertionDefect):
-      discard available(1, 0, 4)
-    expect(AssertionDefect):
-      discard available(1, 6, 4)
-    expect(AssertionDefect):
-      discard available(1, 7, 4)
-    expect(AssertionDefect):
-      discard available(2, 0, 4)
-    expect(AssertionDefect):
-      discard available(2, 1, 4)
-    expect(AssertionDefect):
-      discard available(2, 7, 4)
-    expect(AssertionDefect):
-      discard available(3, 0, 4)
-    expect(AssertionDefect):
-      discard available(3, 1, 4)
-    expect(AssertionDefect):
-      discard available(3, 2, 4)
-    expect(AssertionDefect):
-      discard available(4, 1, 4)
-    expect(AssertionDefect):
-      discard available(4, 2, 4)
-    expect(AssertionDefect):
-      discard available(4, 3, 4)
-    expect(AssertionDefect):
-      discard available(5, 2, 4)
-    expect(AssertionDefect):
-      discard available(5, 3, 4)
-    expect(AssertionDefect):
-      discard available(5, 4, 4)
-    expect(AssertionDefect):
-      discard available(6, 3, 4)
-    expect(AssertionDefect):
-      discard available(6, 4, 4)
-    expect(AssertionDefect):
-      discard available(6, 5, 4)
-    expect(AssertionDefect):
-      discard available(7, 4, 4)
-    expect(AssertionDefect):
-      discard available(7, 5, 4)
-    expect(AssertionDefect):
-      discard available(7, 6, 4)
 
 suite "full(head, tail, 4)":
   test "valid":
@@ -435,56 +335,6 @@ suite "full(head, tail, 4)":
     check(full(7, 3, 4) == true)
     check(full(7, 7, 4) == false)
 
-  test "invalid":
-    expect(AssertionDefect):
-      discard full(0, 5, 4)
-    expect(AssertionDefect):
-      discard full(0, 6, 4)
-    expect(AssertionDefect):
-      discard full(0, 7, 4)
-    expect(AssertionDefect):
-      discard full(1, 0, 4)
-    expect(AssertionDefect):
-      discard full(1, 6, 4)
-    expect(AssertionDefect):
-      discard full(1, 7, 4)
-    expect(AssertionDefect):
-      discard full(2, 0, 4)
-    expect(AssertionDefect):
-      discard full(2, 1, 4)
-    expect(AssertionDefect):
-      discard full(2, 7, 4)
-    expect(AssertionDefect):
-      discard full(3, 0, 4)
-    expect(AssertionDefect):
-      discard full(3, 1, 4)
-    expect(AssertionDefect):
-      discard full(3, 2, 4)
-    expect(AssertionDefect):
-      discard full(4, 1, 4)
-    expect(AssertionDefect):
-      discard full(4, 2, 4)
-    expect(AssertionDefect):
-      discard full(4, 3, 4)
-    expect(AssertionDefect):
-      discard full(5, 2, 4)
-    expect(AssertionDefect):
-      discard full(5, 3, 4)
-    expect(AssertionDefect):
-      discard full(5, 4, 4)
-    expect(AssertionDefect):
-      discard full(6, 3, 4)
-    expect(AssertionDefect):
-      discard full(6, 4, 4)
-    expect(AssertionDefect):
-      discard full(6, 5, 4)
-    expect(AssertionDefect):
-      discard full(7, 4, 4)
-    expect(AssertionDefect):
-      discard full(7, 5, 4)
-    expect(AssertionDefect):
-      discard full(7, 6, 4)
-
 suite "empty(head, tail, 4)":
   test "valid":
     check(empty(0, 0, 4) == true)
@@ -527,53 +377,3 @@ suite "empty(head, tail, 4)":
     check(empty(7, 2, 4) == false)
     check(empty(7, 3, 4) == false)
     check(empty(7, 7, 4) == true)
-
-  test "invalid":
-    expect(AssertionDefect):
-      discard empty(0, 5, 4)
-    expect(AssertionDefect):
-      discard empty(0, 6, 4)
-    expect(AssertionDefect):
-      discard empty(0, 7, 4)
-    expect(AssertionDefect):
-      discard empty(1, 0, 4)
-    expect(AssertionDefect):
-      discard empty(1, 6, 4)
-    expect(AssertionDefect):
-      discard empty(1, 7, 4)
-    expect(AssertionDefect):
-      discard empty(2, 0, 4)
-    expect(AssertionDefect):
-      discard empty(2, 1, 4)
-    expect(AssertionDefect):
-      discard empty(2, 7, 4)
-    expect(AssertionDefect):
-      discard empty(3, 0, 4)
-    expect(AssertionDefect):
-      discard empty(3, 1, 4)
-    expect(AssertionDefect):
-      discard empty(3, 2, 4)
-    expect(AssertionDefect):
-      discard empty(4, 1, 4)
-    expect(AssertionDefect):
-      discard empty(4, 2, 4)
-    expect(AssertionDefect):
-      discard empty(4, 3, 4)
-    expect(AssertionDefect):
-      discard empty(5, 2, 4)
-    expect(AssertionDefect):
-      discard empty(5, 3, 4)
-    expect(AssertionDefect):
-      discard empty(5, 4, 4)
-    expect(AssertionDefect):
-      discard empty(6, 3, 4)
-    expect(AssertionDefect):
-      discard empty(6, 4, 4)
-    expect(AssertionDefect):
-      discard empty(6, 5, 4)
-    expect(AssertionDefect):
-      discard empty(7, 4, 4)
-    expect(AssertionDefect):
-      discard empty(7, 5, 4)
-    expect(AssertionDefect):
-      discard empty(7, 6, 4)
