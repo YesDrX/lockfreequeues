@@ -49,11 +49,3 @@ CI runs the test suite for both C and C++ targets on:
 - macOS `x86_64`
 
 The test suite is also run with [LLVM thread sanitization](https://clang.llvm.org/docs/ThreadSanitizer.html) to check for data races.
-
-### Linting
-
-This project uses [lintball](https://github.com/elijahr/lintball) to auto-format code. Please ensure your changeset passes linting. Enable the githooks with:
-
-```sh
-git config --local core.hooksPath .githooks
-```

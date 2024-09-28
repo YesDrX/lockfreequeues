@@ -26,22 +26,22 @@ jobs:
       matrix:
         include:
           - runs-on: macos-latest
-            nim-version: 'ref:version-1-6'
+            nim-version: 'ref:version-2-0'
             sanitize-threads: 'yes'
             timeout-minutes: 20
 
           - runs-on: ubuntu-latest
-            nim-version: 'latest:1.6'
+            nim-version: 'latest:2.0'
             sanitize-threads: 'yes'
             timeout-minutes: 5
 
           - runs-on: ubuntu-latest
-            nim-version: 'latest:1.4'
+            nim-version: 'latest:1.6'
             sanitize-threads: 'no'
             timeout-minutes: 5
 
           - runs-on: ubuntu-latest
-            nim-version: 'latest:1.2'
+            nim-version: 'latest:1.4'
             sanitize-threads: 'no'
             timeout-minutes: 5
 
@@ -87,7 +87,7 @@ jobs:
       matrix:
         include:
           - arch: aarch64
-            nim-version: 'ref:version-1-6'
+            nim-version: 'ref:version-2-0'
 
     steps:
       # Optimization: re-use cached Nim->C compilation

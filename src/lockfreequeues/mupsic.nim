@@ -136,7 +136,7 @@ proc push*[N, P: static int, T](
       return false
 
     newTail = incOrReset(prevTail, 1, N)
-    # validateHeadAndTail(head, newTail, N)
+    assert validateHeadAndTail(head, newTail, N)
     self.queue.producerTails[self.idx].release(newTail)
 
     if self.queue.prevProducerIdx.compareExchangeWeak(
@@ -210,7 +210,7 @@ proc push*[N, P: static int, T](
         count = avail
 
     newTail = incOrReset(prevTail, count, N)
-    #  validateHeadAndTail(head, newTail, N)
+    assert validateHeadAndTail(head, newTail, N)
     self.queue.producerTails[self.idx].release(newTail)
 
     if self.queue.prevProducerIdx.compareExchangeWeak(

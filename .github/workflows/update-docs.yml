@@ -21,12 +21,12 @@ jobs:
         uses: asdf-vm/actions/install@v1
         with:
           tool_versions: |
-            nim latest:1.6
+            nim latest:2.0
 
       - name: Generate documentation
         run: |
           . "${HOME}/.asdf/asdf.sh"
-          asdf local nim latest:1.6
+          asdf local nim latest:2.0
           rm -rf htmldocs
           nim doc --out:htmldocs src/lockfreequeues.nim
           mv htmldocs/theindex.html htmldocs/index.html
