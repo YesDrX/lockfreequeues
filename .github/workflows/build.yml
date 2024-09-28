@@ -48,6 +48,9 @@ jobs:
 
       - name: Install Nim
         uses: asdf-vm/actions/install@v3
+        with:
+          tool_versions: |
+            nim ${{ matrix.nim-version }}
 
       - name: Install dependencies
         if: runner.os == 'Linux'
@@ -60,7 +63,6 @@ jobs:
           export SANITIZE_THREADS
           SANITIZE_THREADS=${{ matrix.sanitize-threads }}
           . "${HOME}/.asdf/asdf.sh"
-          asdf local nim ${{ matrix.nim-version }}
           nimble develop -y
           nimble test
           nimble examples
