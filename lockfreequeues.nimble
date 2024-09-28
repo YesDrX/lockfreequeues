@@ -8,7 +8,7 @@ license       = "MIT"
 srcDir        = "src"
 
 # Dependencies
-requires "nim >= 1.2.0"
+requires "nim >= 2.0.0"
 
 # Tasks
 task test, "Runs the test suite":

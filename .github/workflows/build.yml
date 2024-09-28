@@ -35,16 +35,6 @@ jobs:
             sanitize-threads: 'yes'
             timeout-minutes: 5
 
-          - runs-on: ubuntu-latest
-            nim-version: 'latest:1.6'
-            sanitize-threads: 'no'
-            timeout-minutes: 5
-
-          - runs-on: ubuntu-latest
-            nim-version: 'latest:1.4'
-            sanitize-threads: 'no'
-            timeout-minutes: 5
-
     steps:
       # Optimization: re-use cached Nim->C compilation
       - name: Restore cache
