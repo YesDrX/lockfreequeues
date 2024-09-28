@@ -25,11 +25,6 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - runs-on: macos-latest
-            nim-version: 'ref:version-2-0'
-            sanitize-threads: 'yes'
-            timeout-minutes: 20
-
           - runs-on: ubuntu-latest
             nim-version: '2.0.8'
             sanitize-threads: 'yes'
