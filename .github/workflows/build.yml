@@ -38,19 +38,16 @@ jobs:
     steps:
       # Optimization: re-use cached Nim->C compilation
       - name: Restore cache
-        uses: actions/cache
+        uses: actions/cache@v3
         with:
           path: ${HOME}/.cache
           key: cache-${{ matrix.runs-on }}-${{ matrix.nim-version }}
 
       - name: Checkout project
-        uses: actions/checkout
+        uses: actions/checkout@v4
 
       - name: Install Nim
-        uses: asdf-vm/actions/install
-        with:
-          tool_versions: |
-            nim ${{ matrix.nim-version }}
+        uses: asdf-vm/actions/install@v3
 
       - name: Install dependencies
         if: runner.os == 'Linux'
@@ -82,16 +79,16 @@ jobs:
     steps:
       # Optimization: re-use cached Nim->C compilation
       - name: Restore cache
-        uses: actions/cache
+        uses: actions/cache@v3
         with:
           path: ${HOME}/.cache
           key: cache-${{ matrix.arch }}-${{ matrix.nim-version }}
 
       - name: Checkout Nim project
-        uses: actions/checkout
+        uses: actions/checkout@v4
 
       # Install & run tests on non-x86
-      - uses: uraimo/run-on-arch-action
+      - uses: uraimo/run-on-arch-action@v2.7.2
         name: Install Nim & run tests
         with:
           arch: ${{ matrix.arch }}
