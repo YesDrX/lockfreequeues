@@ -1,4 +1,4 @@
-![build](https://github.com/elijahr/lockfreequeues/workflows/build/badge.svg) ![build-docs](https://github.com/elijahr/lockfreequeues/workflows/build-docs/badge.svg)
+[![build](https://github.com/elijahr/lockfreequeues/actions/workflows/build.yml/badge.svg)](https://github.com/elijahr/lockfreequeues/actions/workflows/build.yml)
 
 # lockfreequeues
 
